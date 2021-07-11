@@ -1,0 +1,6 @@
+AllCops:
+  Exclude:
+    - spec/**/*
+Metrics/LineLength:
+  Description: 'Maximum line length.'
+  Max: 120
