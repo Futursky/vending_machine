@@ -10,4 +10,5 @@ group :test, :development do
   gem 'byebug'
   gem 'rspec'
   gem 'simplecov'
+  gem 'rubocop'
 end
