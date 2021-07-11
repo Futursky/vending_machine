@@ -11,8 +11,8 @@ Available coins: 0.25, 0.5, 1, 2, 3, 5
 ###How to set it up
 
 ```sh
-git clone https://github.com/Futursky/vending-machine.git
-cd vending-machine
+git clone https://github.com/Futursky/vending_machine
+cd vending_machine
 rvm use
 bundle install
 ```
@@ -31,7 +31,7 @@ rspec
 
 ###Future Improvements
 
-+ Add more Unit test and reach 100% coverage
++ Add more Unit test and reach 100% coverage (now 94.55%)
 + Replace Hash objects with Struct
 + Use gem `tty-prompt` and `tty-table` instead of `puts` and `gets.chomp`
 + Replace greedy change algorithm with dynamic programming memoization algorithm
@@ -39,7 +39,7 @@ rspec
 
 ###Algorithm explanation
 
-I use **greedy** algorithm with recursion, it always pick coin with the largest nominal. Algorithm is working fine for my case but it is not optimal in general and may not return change if it available in Machine. 
+I use **greedy** algorithm with recursion, it always pick coin with the largest nominal. Algorithm is working fine for my case but it is not optimal in general and may not return change if it is available in Machine. 
 For example for coins {1, 5, 10, 15, 17, 20} and change sum of 34 **greedy** algorithm will return 6 coins [20,10,1,1,1,1] but **dynamic programming** algorithm will return only 2 coin [17,17].
 
 **greedy**:
@@ -77,6 +77,7 @@ min_coins_change(ALLOWED_NUMBERS, 34)
 ```
 
 ###More about coins change algorithms
+
 [link1](http://csharpbook.sakutin.ru/%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC-%D0%B2%D1%8B%D0%B4%D0%B0%D1%87%D0%B8-%D1%81%D0%B4/)
 [link2](http://www.edevyatkin.com/problems/2015/10/21/making-change.html)
 [link3](http://aliev.me/runestone/Recursion/DynamicProgramming.html)

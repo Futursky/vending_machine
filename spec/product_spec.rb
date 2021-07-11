@@ -1,4 +1,4 @@
-require 'display'
+require 'product_box'
 
 describe ProductBox do
   #TODO
